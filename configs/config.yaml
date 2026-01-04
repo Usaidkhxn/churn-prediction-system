@@ -1,0 +1,21 @@
+project_name: "churn-ml-system"
+random_state: 42
+
+data:
+  path: "data/raw/churn.csv"
+  target: "Churn"
+  test_size: 0.2
+
+train:
+  model_type: "logreg"   # logreg | random_forest (we’ll add more later)
+
+artifacts:
+  dir: "artifacts"
+  model_path: "artifacts/model.joblib"
+  metrics_path: "artifacts/metrics.json"
+
+
+business:
+  retention_offer_cost: 10.0         # $ cost per customer contacted
+  retention_success_prob: 0.25       # probability an offer prevents churn if customer would churn
+  churn_value: 200.0                 # estimated revenue saved if churn prevented
