@@ -5,7 +5,7 @@ Designed with production-style architecture, batch and real-time inference, and 
 
 ---
 
-## 🚀 Key Features
+## Key Features
 
 - End-to-end ML pipeline: data ingestion → preprocessing → training → evaluation → deployment
 - Mixed-type preprocessing using `ColumnTransformer` (numeric + categorical features)
@@ -17,7 +17,7 @@ Designed with production-style architecture, batch and real-time inference, and 
 
 ---
 
-## 📊 Model Performance (Baseline)
+## Model Performance (Baseline)
 
 | Metric | Value |
 |------|------|
@@ -28,7 +28,7 @@ Designed with production-style architecture, batch and real-time inference, and 
 
 ---
 
-## 🧠 Business Logic: Retention Targeting
+## Business Logic: Retention Targeting
 
 Customers are prioritized using an expected value (EV) framework:
 
@@ -41,7 +41,7 @@ This allows targeting only customers who provide **positive expected business va
 
 ---
 
-## 🏗 Project Architecture
+## Project Architecture
 
 ```text
 data/raw
@@ -55,7 +55,7 @@ artifacts (model + metrics)
 FastAPI service ←→ CLI batch scoring
 ```
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```text
 churn-ml-system/
@@ -81,7 +81,7 @@ churn-ml-system/
 
 ```
 
-## ⚙️ Setup & Installation
+## Setup & Installation
 
 ```bash
 python -m venv .venv
@@ -89,14 +89,14 @@ source .venv/bin/activate    # Windows: .venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 
 ```
-## 🏋️ Train the Model
+## Train the Model
 
 ```text
 python -m src.ml_system.train
 
 ```
 
-## 🌐 Run the API
+## Run the API
 
 ```text
 uvicorn src.ml_system.api:app --reload
@@ -111,7 +111,7 @@ http://127.0.0.1:8000/docs
 
 ```
 
-## 🧪 Batch Scoring (CLI)
+## Batch Scoring (CLI)
 
 ```text
 
@@ -120,7 +120,7 @@ python -m src.ml_system.cli_score \
   --output artifacts/scored_churn.csv
 
 ```
-### 📌 Technologies
+### Technologies
 
 
 
@@ -130,5 +130,6 @@ python -m src.ml_system.cli_score \
 - Pydantic
 - Joblib
 - YAML configuration
+
 
 
